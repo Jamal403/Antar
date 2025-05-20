@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jamal's Webpage</title>
+  <style>
+    :root {
+      --primary-color: #532376;
+      --secondary-color: #9370DB;
+      --light-color: #f8f8ff;
+      --dark-color: #2e2e2e;
+      --accent-color: #FF69B4;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-color);
+      color: var(--dark-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+      font-size: 2.5em;
+    }
+
+    nav {
+      background: var(--primary-color);
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      padding: 12px 25px;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 25px;
+      transition: background 0.4s ease;
+    }
+
+    nav a:hover {
+      background: var(--accent-color);
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px;
+      background: white;
+    }
+
+    section {
+      background: var(--light-color);
+      margin: 20px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      width: 45%;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      border: 4px solid var(--accent-color);
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    form {
+      background: var(--light-color);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    form button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background: var(--accent-color);
+    }
+
+    footer {
+      background: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+
+      main {
+        flex-direction: column;
+      }
+
+      section {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Jamal's Webpage
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>This beautifully designed page demonstrates semantic HTML, responsive design, and CSS elegance.</p>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/F4fbwKV9dBU?si=WS08_eXIlOplayXR" title="Demo video" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Services</h2>
+      <p>We offer creative design solutions, training in frontend development, and professional consultation.</p>
+      <img src="image/photo.jpg" alt="Sample Visual">
+    </section>
+  </main>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Jamal's Webpage. All rights reserved.
+  </footer>
+</body>
+</html>
